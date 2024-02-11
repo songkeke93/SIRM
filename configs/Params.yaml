@@ -1,0 +1,26 @@
+setting:
+  label: 1
+  normalize: true
+  normalizeScale: 100
+  interpolator: 'sitkBSpline'
+  resampledPixelSpacing: [3, 3, 3]
+  binWidth: 5
+  voxelArrayShift: 300
+
+imageType:
+  Original: {}
+  LoG:
+    # If you include sigma values >5, remember to also increase the padDistance. Because of resampling to (2, 2, 2), the
+    # use of sigmas < 2 mm is not recommended.
+    sigma: [3.0, 5.0]
+  Wavelet: {}
+
+
+featureClass:
+  firstorder:
+  shape:
+  glcm:
+  glrlm:
+  glszm:
+  gldm:
+  ngtdm:
